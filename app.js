@@ -10,6 +10,7 @@ function preload() {}
 // SETUP IS THE SECOND
 function setup() {
   createCanvas(WIDTH, HEIGHT);
+  score.innerText = game.score;
 }
 
 console.log("HELLO");

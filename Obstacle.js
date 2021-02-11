@@ -14,7 +14,7 @@ class Obstacle {
   }
 
   setRandomPosition() {
-    this.x = Math.floor(Math.random() * (WIDTH - this.width));
+    this.x = Math.floor(random(WIDTH - this.width));
     this.y = Math.floor(Math.random() * (HEIGHT - this.height));
   }
 }

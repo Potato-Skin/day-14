@@ -2,6 +2,7 @@ class Game {
   constructor() {
     this.player = new Player(250, 250);
     this.obstacle = new Obstacle(50, 400);
+    this.score = 0;
   }
 
   draw() {
@@ -12,8 +13,8 @@ class Game {
     if (this.collisionCheck(this.player, this.obstacle)) {
       noLoop();
       const button = document.createElement("button");
-      button.innerText = "Wo wooo. You lost. let's play again?";
-      button.style.background = "red";
+      button.innerText = "Wo wooo. You won. let's play another level?";
+      button.style.background = "green";
       document.body.appendChild(button);
       // button.addEventListener("click", () => {
       //   console.log("YAY. LETS PLAY");
@@ -21,6 +22,8 @@ class Game {
       button.onclick = () => {
         this.obstacle.setRandomPosition();
         button.parentNode.removeChild(button);
+        this.score++;
+        score.innerText = this.score;
         loop();
       };
     }
