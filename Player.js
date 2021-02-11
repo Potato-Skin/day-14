@@ -7,7 +7,8 @@ class Player {
   }
 
   draw() {
-    rect(this.x, this.y, this.width, this.height);
+    //  rect(this.x, this.y, this.width, this.height);
+    image(pictureVariable, this.x, this.y, this.width, this.height);
   }
 
   moveUp() {

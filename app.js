@@ -5,7 +5,9 @@ function draw() {
 }
 
 // PRELOAD IS THE FIRST
-function preload() {}
+function preload() {
+  pictureVariable = loadImage("./Profile-Andre.png");
+}
 
 // SETUP IS THE SECOND
 function setup() {
